@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dokumenty i Rozporządzenia | JRG-1 Warszawa | SeaSideRP</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="topbar">PAŃSTWOWA STRAŻ POŻARNA • SEASIDERP • ER:LC</div>
+<header class="header"><div class="header-inner">
+  <a class="logo" href="index.html">PSP</a>
+  <div class="brand"><h1>JRG-1 WARSZAWA</h1><p>Jednostka Ratowniczo-Gaśnicza Nr 1 • SeaSideRP</p></div>
+  <nav class="nav"><a class="" href="index.html">Strona Główna</a><a class="" href="wozy.html">Podział Bojowy</a><a class="active" href="dokumenty.html">Dokumenty</a><a class="" href="dowodztwo.html">Dowództwo</a><a class="" href="kontakt.html">Kontakt</a><a class="" href="social.html">Social Media</a></nav>
+</div></header><main class="container">
+<div class="section-head"><h2>Dokumenty i Rozporządzenia</h2><p>Centralne miejsce na dokumentację jednostki.</p></div>
+<div class="grid">
+<a class="doc card link-card" href="#"><span class="badge">HTML</span><h3>Regulamin JRG-1</h3><p>Szablon regulaminu jednostki.</p></a>
+<a class="doc card link-card" href="#"><span class="badge">HTML</span><h3>Rozkazy personalne</h3><p>Miejsce na rozkazy, awanse i zmiany personalne.</p></a>
+<a class="doc card link-card" href="#"><span class="badge">HTML</span><h3>Procedury operacyjne</h3><p>Procedury i standardy obowiązujące w roleplay.</p></a>
+<a class="doc card link-card" href="#"><span class="badge">HTML</span><h3>Dokumentacja szkoleniowa</h3><p>Materiały do szkoleń i egzaminów.</p></a>
+<a class="doc card link-card" href="https://forms.gle/JNkUQW671bywEdc57"><span class="badge">HTML</span><h3>Karta MCR</h3><p>Karta Medycznych Czynności Ratunkowych</p></a>
+<a class="doc card link-card" href="#"><span class="badge">HTML</span><h3>DLA PROGRAMISTY</h3><p>SPIS DLA PROGRAMISTY STRONY, NIE INGEROWAĆ</p></a>
+</div>
+</main>
+<footer class="footer">
+  <strong>JRG-1 WARSZAWA</strong>
+  <p>Państwowa Straż Pożarna • SeaSideRP • ER:LC</p>
+  <p class="small">Strona fikcyjna przeznaczona do celów roleplay.</p>
+  <p class="small">© 2026 SeaSideRP</p>
+</footer>
+
+<script>
+function setTheme(theme){
+  document.body.classList.remove("dark","contrast");
+  if(theme==="dark") document.body.classList.add("dark");
+  if(theme==="contrast") document.body.classList.add("contrast");
+  localStorage.setItem("jrgTheme",theme);
+}
+const savedTheme=localStorage.getItem("jrgTheme");
+if(savedTheme) setTheme(savedTheme);
+
+function toggleVehicle(el){el.classList.toggle("open");}
+
+function updateVisits(){
+  let visits=parseInt(localStorage.getItem("jrgVisits")||"0",10)+1;
+  localStorage.setItem("jrgVisits",visits);
+  const counter=document.getElementById("visitCounter");
+  if(counter) counter.textContent=visits.toLocaleString("pl-PL");
+}
+document.addEventListener("DOMContentLoaded",updateVisits);
+</script>
+</body></html>

@@ -1,0 +1,1275 @@
+/* =========================================
+   JRG-1 WARSZAWA • SEASIDERP
+   WSPÓLNY ARKUSZ STYLÓW
+========================================= */
+
+:root{
+  --red:#a90000;
+  --red2:#750000;
+
+  --bg:#f3f3f3;
+  --card:#ffffff;
+
+  --text:#1d1d1d;
+  --muted:#666666;
+
+  --border:#d6d6d6;
+
+  --header:#ffffff;
+
+  --dark:#151515;
+  --dark2:#202020;
+
+  --shadow:0 4px 18px rgba(0,0,0,.10);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar{
+  background:var(--red);
+  color:#fff;
+
+  padding:8px 20px;
+
+  text-align:center;
+
+  font-size:12px;
+  font-weight:700;
+
+  letter-spacing:.7px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header{
+  background:var(--header);
+
+  border-bottom:1px solid var(--border);
+
+  position:sticky;
+  top:0;
+
+  z-index:100;
+
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.header-inner{
+  max-width:1250px;
+
+  margin:auto;
+
+  min-height:82px;
+
+  padding:14px 20px;
+
+  display:flex;
+  align-items:center;
+
+  gap:18px;
+}
+
+.logo{
+  width:55px;
+  height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:var(--red);
+
+  color:#fff;
+
+  font-size:17px;
+  font-weight:900;
+
+  border-radius:8px;
+
+  flex-shrink:0;
+
+  box-shadow:0 3px 10px rgba(169,0,0,.25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.logo:hover{
+  transform:translateY(-2px);
+  background:var(--red2);
+}
+
+.brand{
+  min-width:220px;
+}
+
+.brand h1{
+  font-size:20px;
+  line-height:1.15;
+
+  letter-spacing:.5px;
+}
+
+.brand p{
+  color:var(--muted);
+
+  font-size:12px;
+
+  margin-top:2px;
+}
+
+
+/* =========================================
+   NAVIGACJA
+========================================= */
+
+.nav{
+  margin-left:auto;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  align-items:center;
+
+  justify-content:flex-end;
+
+  gap:4px;
+}
+
+.nav a{
+  padding:9px 11px;
+
+  border-radius:6px;
+
+  font-size:13px;
+  font-weight:700;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.nav a:hover{
+  background:#eeeeee;
+}
+
+.nav a.active{
+  background:var(--red);
+  color:#fff;
+}
+
+
+/* =========================================
+   GŁÓWNY KONTENER
+========================================= */
+
+.container{
+  max-width:1250px;
+
+  margin:0 auto;
+
+  padding:35px 20px 50px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--red),
+      var(--red2)
+    );
+
+  color:#fff;
+
+  padding:40px;
+
+  border-radius:12px;
+
+  box-shadow:var(--shadow);
+
+  margin-bottom:35px;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:250px;
+  height:250px;
+
+  right:-90px;
+  top:-100px;
+
+  border-radius:50%;
+
+  border:35px solid rgba(255,255,255,.08);
+}
+
+.hero h2{
+  font-size:32px;
+
+  margin-bottom:10px;
+}
+
+.hero p{
+  max-width:850px;
+
+  color:rgba(255,255,255,.88);
+}
+
+
+/* =========================================
+   SECTION HEAD
+========================================= */
+
+.section-head{
+  margin:35px 0 20px;
+}
+
+.section-head h2{
+  font-size:25px;
+
+  margin-bottom:4px;
+}
+
+.section-head p{
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+
+/* =========================================
+   KARTY
+========================================= */
+
+.card{
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  box-shadow:var(--shadow);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:18px;
+}
+
+
+/* =========================================
+   LINK CARDS
+========================================= */
+
+.link-card{
+  display:block;
+
+  padding:22px;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.link-card:hover{
+  transform:translateY(-3px);
+
+  border-color:var(--red);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.13);
+}
+
+.link-card h3{
+  margin-bottom:7px;
+}
+
+.link-card p{
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+
+/* =========================================
+   OGŁOSZENIA
+========================================= */
+
+.notice{
+  padding:22px;
+
+  margin-bottom:15px;
+}
+
+.notice h3{
+  margin-bottom:4px;
+}
+
+.notice .date{
+  color:var(--red);
+
+  font-size:12px;
+  font-weight:700;
+
+  margin-bottom:8px;
+}
+
+
+/* =========================================
+   STATYSTYKI
+========================================= */
+
+.stats{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.stat{
+  padding:25px;
+
+  text-align:center;
+}
+
+.stat b{
+  display:block;
+
+  color:var(--red);
+
+  font-size:30px;
+}
+
+.stat span{
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+
+/* =========================================
+   MOTYW
+========================================= */
+
+.theme-box{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  padding:20px;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+}
+
+.theme-box button{
+  border:1px solid var(--border);
+
+  background:var(--card);
+
+  color:var(--text);
+
+  padding:10px 15px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:.2s ease;
+}
+
+.theme-box button:hover{
+  background:var(--red);
+
+  color:#fff;
+
+  border-color:var(--red);
+}
+
+
+/* =========================================
+   DOKUMENTY
+========================================= */
+
+.doc{
+  position:relative;
+}
+
+.badge{
+  display:inline-block;
+
+  background:var(--red);
+
+  color:#fff;
+
+  padding:3px 7px;
+
+  border-radius:4px;
+
+  font-size:10px;
+  font-weight:800;
+
+  margin-bottom:9px;
+}
+
+
+/* =========================================
+   DOWÓDZTWO
+========================================= */
+
+.command-group{
+  margin-bottom:40px;
+}
+
+.command-group > h3{
+  font-size:20px;
+
+  margin-bottom:15px;
+
+  padding-left:12px;
+
+  border-left:4px solid var(--red);
+}
+
+.person{
+  overflow:hidden;
+}
+
+.person img{
+  width:100%;
+  height:220px;
+
+  object-fit:cover;
+
+  display:block;
+
+  background:#ddd;
+}
+
+.person-info{
+  padding:17px;
+}
+
+.person-info h4{
+  font-size:17px;
+}
+
+.person-info p{
+  color:var(--muted);
+
+  font-size:13px;
+
+  margin:4px 0 10px;
+}
+
+.roblox{
+  display:inline-block;
+
+  color:var(--red);
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+
+/* =========================================
+   KONTAKT
+========================================= */
+
+.contact-row{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:18px;
+}
+
+
+/* =========================================
+   PODZIAŁ BOJOWY
+========================================= */
+
+
+/* FILTRY */
+
+.vehicle-filters{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  padding:6px;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:9px;
+
+  box-shadow:var(--shadow);
+
+  margin-bottom:35px;
+}
+
+.vehicle-filter{
+  border:0;
+
+  background:transparent;
+
+  color:var(--text);
+
+  padding:11px 16px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .15s ease;
+}
+
+.vehicle-filter:hover{
+  background:#eeeeee;
+}
+
+.vehicle-filter.active{
+  background:var(--red);
+
+  color:#fff;
+}
+
+.vehicle-filter:active{
+  transform:scale(.98);
+}
+
+
+/* SEKCJA JEDNOSTKI */
+
+.vehicle-section{
+  margin-bottom:45px;
+}
+
+.vehicle-section-header{
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding-bottom:15px;
+
+  margin-bottom:18px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.vehicle-section-header h3{
+  font-size:22px;
+
+  margin-top:3px;
+}
+
+.vehicle-section-header p{
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+.vehicle-section-label{
+  color:var(--red);
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+}
+
+.vehicle-section-count{
+  flex-shrink:0;
+
+  padding:6px 10px;
+
+  background:rgba(169,0,0,.08);
+
+  color:var(--red);
+
+  border-radius:5px;
+
+  font-size:12px;
+
+  font-weight:800;
+}
+
+
+/* SIATKA POJAZDÓW */
+
+.vehicles-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:20px;
+}
+
+
+/* KARTA POJAZDU */
+
+.vehicle-card{
+  overflow:hidden;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:11px;
+
+  box-shadow:var(--shadow);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.vehicle-card:hover{
+  transform:translateY(-4px);
+
+  border-color:rgba(169,0,0,.45);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.14);
+}
+
+
+/* GÓRA KARTY */
+
+.vehicle-card-top{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+  padding:15px 17px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.vehicle-type{
+  display:inline-block;
+
+  color:var(--red);
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.8px;
+
+  margin-right:7px;
+}
+
+.vehicle-number{
+  font-size:13px;
+
+  font-weight:800;
+}
+
+
+/* STATUS */
+
+.vehicle-status{
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+}
+
+.status-dot{
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:#2c9b4b;
+
+  box-shadow:
+    0 0 0 3px rgba(44,155,75,.12);
+}
+
+
+/* WIZUALIZACJA POJAZDU */
+
+.vehicle-visual{
+  min-height:175px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #242424,
+      #111111
+    );
+
+  color:#fff;
+}
+
+.vehicle-visual::before{
+  content:"";
+
+  position:absolute;
+
+  width:230px;
+  height:230px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.vehicle-visual::after{
+  content:"";
+
+  position:absolute;
+
+  width:160px;
+  height:160px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(169,0,0,.25);
+}
+
+.vehicle-symbol{
+  position:relative;
+
+  z-index:2;
+
+  color:#fff;
+
+  font-size:36px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+}
+
+.vehicle-code{
+  position:relative;
+
+  z-index:2;
+
+  margin-top:5px;
+
+  color:rgba(255,255,255,.65);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+
+/* KARTA - ZAWARTOŚĆ */
+
+.vehicle-content{
+  padding:20px;
+}
+
+.vehicle-content h3{
+  font-size:18px;
+
+  line-height:1.3;
+
+  margin-bottom:17px;
+}
+
+
+/* PARAMETRY */
+
+.vehicle-specs{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:10px;
+
+  margin-bottom:20px;
+}
+
+.vehicle-spec{
+  padding:10px 12px;
+
+  background:var(--bg);
+
+  border:1px solid var(--border);
+
+  border-radius:6px;
+}
+
+.vehicle-spec span{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.4px;
+
+  margin-bottom:2px;
+}
+
+.vehicle-spec strong{
+  display:block;
+
+  font-size:12px;
+}
+
+
+/* WYPOSAŻENIE */
+
+.vehicle-equipment{
+  padding-top:17px;
+
+  border-top:1px solid var(--border);
+}
+
+.vehicle-equipment h4{
+  font-size:13px;
+
+  margin-bottom:10px;
+}
+
+.equipment-list{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:6px;
+}
+
+.equipment-tag{
+  display:inline-block;
+
+  padding:5px 8px;
+
+  background:rgba(169,0,0,.07);
+
+  border:1px solid rgba(169,0,0,.16);
+
+  color:var(--red);
+
+  border-radius:4px;
+
+  font-size:10px;
+
+  font-weight:700;
+}
+
+
+/* INFORMACJA */
+
+.vehicle-info{
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:15px;
+
+  padding:20px;
+
+  margin-top:10px;
+
+  border-left:4px solid var(--red);
+}
+
+.vehicle-info-icon{
+  width:34px;
+  height:34px;
+
+  flex-shrink:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--red);
+
+  color:#fff;
+
+  font-weight:900;
+}
+
+.vehicle-info h3{
+  margin-bottom:5px;
+
+  font-size:16px;
+}
+
+.vehicle-info p{
+  color:var(--muted);
+
+  font-size:13px;
+
+  margin-bottom:5px;
+}
+
+
+/* =========================================
+   STOPKA
+========================================= */
+
+.footer{
+  background:var(--dark);
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:30px 20px;
+
+  margin-top:30px;
+}
+
+.footer p{
+  color:#bbb;
+
+  margin-top:4px;
+}
+
+
+/* =========================================
+   TEKST POMOCNICZY
+========================================= */
+
+.small{
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+
+/* =========================================
+   TRYB CIEMNY
+========================================= */
+
+body.dark{
+  --bg:#111111;
+
+  --card:#1c1c1c;
+
+  --text:#eeeeee;
+
+  --muted:#aaaaaa;
+
+  --border:#333333;
+
+  --header:#181818;
+}
+
+body.dark .nav a:hover{
+  background:#292929;
+}
+
+body.dark .vehicle-filter:hover{
+  background:#292929;
+}
+
+body.dark .vehicle-spec{
+  background:#161616;
+}
+
+body.dark .vehicle-equipment{
+  border-color:#333;
+}
+
+
+/* =========================================
+   TRYB WYSOKIEGO KONTRASTU
+========================================= */
+
+body.contrast{
+  --bg:#000000;
+
+  --card:#000000;
+
+  --text:#ffffff;
+
+  --muted:#ffffff;
+
+  --border:#ffffff;
+
+  --header:#000000;
+
+  --red:#ff2b2b;
+
+  --red2:#ff0000;
+}
+
+body.contrast .card,
+body.contrast .vehicle-card,
+body.contrast .vehicle-filters,
+body.contrast .theme-box{
+  border-width:2px;
+}
+
+body.contrast .vehicle-spec{
+  background:#000;
+  border-color:#fff;
+}
+
+body.contrast .equipment-tag{
+  color:#fff;
+
+  border-color:#fff;
+
+  background:#000;
+}
+
+body.contrast .vehicle-filter:hover{
+  background:#fff;
+  color:#000;
+}
+
+
+/* =========================================
+   RESPONSYWNOŚĆ
+========================================= */
+
+@media(max-width:1000px){
+
+  .header-inner{
+    flex-wrap:wrap;
+  }
+
+  .nav{
+    width:100%;
+
+    justify-content:flex-start;
+
+    margin-left:0;
+
+    padding-top:5px;
+  }
+
+  .grid{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+  .vehicles-grid{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+}
+
+
+@media(max-width:650px){
+
+  .topbar{
+    font-size:10px;
+
+    padding:7px 10px;
+  }
+
+  .header-inner{
+    padding:12px 14px;
+  }
+
+  .brand h1{
+    font-size:17px;
+  }
+
+  .brand p{
+    font-size:11px;
+  }
+
+  .logo{
+    width:48px;
+    height:48px;
+  }
+
+  .nav{
+    gap:3px;
+  }
+
+  .nav a{
+    padding:7px 8px;
+
+    font-size:11px;
+  }
+
+  .container{
+    padding:
+      25px 14px
+      40px;
+  }
+
+  .hero{
+    padding:28px 22px;
+  }
+
+  .hero h2{
+    font-size:25px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .contact-row{
+    grid-template-columns:1fr;
+  }
+
+  .vehicles-grid{
+    grid-template-columns:1fr;
+  }
+
+  .vehicle-section-header{
+    align-items:flex-start;
+
+    flex-direction:column;
+  }
+
+  .vehicle-section-count{
+    align-self:flex-start;
+  }
+
+  .vehicle-filters{
+    padding:5px;
+  }
+
+  .vehicle-filter{
+    flex:1 1 auto;
+
+    text-align:center;
+  }
+
+  .vehicle-specs{
+    grid-template-columns:1fr;
+  }
+
+  .vehicle-info{
+    flex-direction:column;
+  }
+
+}

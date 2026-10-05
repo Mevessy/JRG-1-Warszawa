@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Social Media i Linki | JRG-1 Warszawa | SeaSideRP</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="topbar">PAŃSTWOWA STRAŻ POŻARNA • SEASIDERP • ER:LC</div>
+<header class="header"><div class="header-inner">
+  <a class="logo" href="index.html">PSP</a>
+  <div class="brand"><h1>JRG-1 WARSZAWA</h1><p>Jednostka Ratowniczo-Gaśnicza Nr 1 • SeaSideRP</p></div>
+  <nav class="nav"><a class="" href="index.html">Strona Główna</a><a class="" href="wozy.html">Podział Bojowy</a><a class="" href="dokumenty.html">Dokumenty</a><a class="" href="dowodztwo.html">Dowództwo</a><a class="" href="kontakt.html">Kontakt</a><a class="active" href="social.html">Social Media</a></nav>
+</div></header><main class="container">
+<div class="section-head"><h2>Social Media i Linki</h2><p>Oficjalne profile i odnośniki projektu.</p></div>
+<div class="grid">
+<a class="card link-card" href="https://www.tiktok.com/@jrg1wwa_seasiderp" target="_blank"><h3>🎵 TikTok</h3><p>Profil JRG-1 Warszawa.</p></a>
+<a class="card link-card" href="https://discord.gg/mt4f7Jhbq" target="_blank"><h3>💬 Discord</h3><p>Oficjalna społeczność SeaSideRP.</p></a>
+<a class="card link-card" href="https://www.roblox.com/communities/325369275/PRM-PSP-SeaSideRP-Server-Frakcyjny#!/about" target="_blank"><h3>🎮 Grupa Roblox</h3><p>Grupa Roblox SeaSideRP.</p></a>
+</div>
+</main>
+<footer class="footer">
+  <strong>JRG-1 WARSZAWA</strong>
+  <p>Państwowa Straż Pożarna • SeaSideRP • ER:LC</p>
+  <p class="small">Strona fikcyjna przeznaczona do celów roleplay.</p>
+  <p class="small">© 2026 SeaSideRP</p>
+</footer>
+
+<script>
+function setTheme(theme){
+  document.body.classList.remove("dark","contrast");
+  if(theme==="dark") document.body.classList.add("dark");
+  if(theme==="contrast") document.body.classList.add("contrast");
+  localStorage.setItem("jrgTheme",theme);
+}
+const savedTheme=localStorage.getItem("jrgTheme");
+if(savedTheme) setTheme(savedTheme);
+
+function toggleVehicle(el){el.classList.toggle("open");}
+
+function updateVisits(){
+  let visits=parseInt(localStorage.getItem("jrgVisits")||"0",10)+1;
+  localStorage.setItem("jrgVisits",visits);
+  const counter=document.getElementById("visitCounter");
+  if(counter) counter.textContent=visits.toLocaleString("pl-PL");
+}
+document.addEventListener("DOMContentLoaded",updateVisits);
+</script>
+</body></html>

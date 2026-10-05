@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dowództwo JRG-1 | JRG-1 Warszawa | SeaSideRP</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="topbar">PAŃSTWOWA STRAŻ POŻARNA • SEASIDERP • ER:LC</div>
+<header class="header"><div class="header-inner">
+  <a class="logo" href="index.html">PSP</a>
+  <div class="brand"><h1>JRG-1 WARSZAWA</h1><p>Jednostka Ratowniczo-Gaśnicza Nr 1 • SeaSideRP</p></div>
+  <nav class="nav"><a class="" href="index.html">Strona Główna</a><a class="" href="wozy.html">Podział Bojowy</a><a class="" href="dokumenty.html">Dokumenty</a><a class="active" href="dowodztwo.html">Dowództwo</a><a class="" href="kontakt.html">Kontakt</a><a class="" href="social.html">Social Media</a></nav>
+</div></header><main class="container">
+<div class="section-head"><h2>Dowództwo</h2><p>Struktura dowodzenia jednostki i nadrzędnych komend.</p></div>
+<div class="command-group"><h3>Komenda Wojewódzka</h3><div class="grid"><div class="person card"><img src="nazako.png" alt="Komendant Wojewódzki"><div class="person-info"><h4>Janusz Bruk</h4><p>Komendant Wojewódzki</p><a class="roblox" href="https://www.roblox.com/users/487912028/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="radziu.png" alt="I Zastępca Komendanta Wojewódzkiego"><div class="person-info"><h4>Marek Źieliński</h4><p>I Zastępca Komendanta Wojewódzkiego</p><a class="roblox" href="https://www.roblox.com/users/4297946060/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="dzban.png" alt="II Zastępca Komendanta Wojewódzkiego"><div class="person-info"><h4>Bartosz Małkiński</h4><p>II Zastępca Komendanta Wojewódzkiego</p><a class="roblox" href="https://www.roblox.com/users/912828349/profile" target="_blank">Profil Roblox</a></div></div>
+</div></div>
+<div class="command-group"><h3>Komenda Miejska</h3><div class="grid"><div class="person card"><img src="bochen.png" alt="Komendant Miejski"><div class="person-info"><h4>Tomasz Bochenek</h4><p>Komendant Miejski</p><a class="roblox" href="https://www.roblox.com/users/3157273788/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="karol.png" alt="I Zastępca Komendanta Miejskiego"><div class="person-info"><h4>Michał Szop</h4><p>I Zastępca Komendanta Miejskiego</p><a class="roblox" href="https://www.roblox.com/users/2250505492/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="krycha.png" alt="II Zastępca Komendanta Miejskiego"><div class="person-info"><h4>Mariusz Hilison</h4><p>II Zastępca Komendanta Miejskiego</p><a class="roblox" href="https://www.roblox.com/users/3171853586/profile" target="_blank">Profil Roblox</a></div></div>
+</div></div>
+<div class="command-group"><h3>Dowództwo JRG-1 Warszawa</h3><div class="grid"><div class="person card"><img src="michalm.png" alt="Dowódca JRG-1 Warszawa"><div class="person-info"><h4>Michał Mazur</h4><p>Dowódca JRG-1 Warszawa</p><a class="roblox" href="https://www.roblox.com/users/4723096197/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="natan.png" alt="Zastępca Dowódcy JRG-1 Warszawa"><div class="person-info"><h4>Natan Zabrze</h4><p>Zastępca Dowódcy JRG-1 Warszawa</p><a class="roblox" href="https://www.roblox.com/users/2206827518/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="won.png" alt="Dowódca Zmiany"><div class="person-info"><h4>Adam Won</h4><p>Dowódca Zmiany</p><a class="roblox" href="https://www.roblox.com/users/1239873371/profile" target="_blank">Profil Roblox</a></div></div><div class="person card"><img src="puste.png" alt="Zastępca Dowódcy Zmiany"><div class="person-info"><h4>BRAK</h4><p>Zastępca Dowódcy Zmiany</p><a class="roblox" href="#" target="_blank">Profil Roblox</a></div></div>
+</div></div>
+<p class="small">Zdjęcia, Nazwiska i profile Roblox są zgodne z obecnym zarządem.</p>
+</main>
+<footer class="footer">
+  <strong>JRG-1 WARSZAWA</strong>
+  <p>Państwowa Straż Pożarna • SeaSideRP • ER:LC</p>
+  <p class="small">Strona fikcyjna przeznaczona do celów roleplay.</p>
+  <p class="small">© 2026 SeaSideRP</p>
+</footer>
+
+<script>
+function setTheme(theme){
+  document.body.classList.remove("dark","contrast");
+  if(theme==="dark") document.body.classList.add("dark");
+  if(theme==="contrast") document.body.classList.add("contrast");
+  localStorage.setItem("jrgTheme",theme);
+}
+const savedTheme=localStorage.getItem("jrgTheme");
+if(savedTheme) setTheme(savedTheme);
+
+function toggleVehicle(el){el.classList.toggle("open");}
+
+function updateVisits(){
+  let visits=parseInt(localStorage.getItem("jrgVisits")||"0",10)+1;
+  localStorage.setItem("jrgVisits",visits);
+  const counter=document.getElementById("visitCounter");
+  if(counter) counter.textContent=visits.toLocaleString("pl-PL");
+}
+document.addEventListener("DOMContentLoaded",updateVisits);
+</script>
+</body></html>
